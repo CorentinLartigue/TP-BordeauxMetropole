@@ -1,0 +1,56 @@
+body{
+    background-image: url(Bordeaux.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 1fr 1fr 6fr 1fr;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+header{
+    grid-row: 1;
+    grid-column: span 2;
+}
+nav{
+    text-align: center;
+}
+nav li{
+    grid-row: 2;
+    grid-column: span2;
+    display: inline-block;
+    list-style-type: none;
+
+}
+nav a{
+    display:inline-block ;
+    text-decoration: none;
+    color:white;
+}
+
+nav li:hover{
+    color:gray;
+}
+
+aside{
+    grid-row: 3;
+    grid-column: 1;
+    background-color:gray;
+    
+}   
+section{
+    grid-row: 3;
+    grid-column: 2;
+    background-color: gray;
+}
+footer{
+    grid-row: 4;
+    grid-column: span 2;
+}
+footer p{
+    text-align: center;
+}
