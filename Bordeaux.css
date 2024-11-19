@@ -1,56 +1,139 @@
-body{
-    background-image: url(Bordeaux.jpg);
+/* Global Styles */
+body {
+    background-image: url("image/logo.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    display: grid;
-    grid-template-columns: 3fr 5fr;
-    grid-template-rows: 1fr 1fr 6fr 1fr;
+    display: flex;
+    flex-direction: column; /* Aligner le contenu du body en colonne */
+    min-height: 100vh; /* Hauteur minimale pour occuper toute la hauteur de la fenêtre */
+    margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-h1{
-    font-size: 30px;
-    text-align: center;
-}
-header{
-    grid-row: 1;
-    grid-column: span 2;
-}
-nav{
-    text-align: center;
-}
-nav li{
-    grid-row: 2;
-    grid-column: span2;
-    display: inline-block;
-    list-style-type: none;
 
+/* Header */
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
 }
-nav a{
-    display:inline-block ;
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #ffcc00;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
     text-decoration: none;
-    color:white;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav li:hover{
-    color:gray;
+nav a:hover {
+    background-color: #ffcc00;
+    color: black;
 }
 
-aside{
-    grid-row: 3;
-    grid-column: 1;
-    background-color:gray;
-    
-}   
-section{
-    grid-row: 3;
-    grid-column: 2;
-    background-color: gray;
+/* Main Content (Aside + Section) */
+.main-content {
+    display: flex; /* Utilise flexbox pour aligner aside et section côte à côte */
+    gap: 20px;     /* Ajoute un espace entre les deux éléments */
+    margin-top: 20px;
+    padding: 20px;
+    flex-grow: 1;   /* Fait en sorte que le main-content prenne tout l'espace disponible */
 }
-footer{
-    grid-row: 4;
-    grid-column: span 2;
+
+/* Aside */
+aside {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Le aside prend 1 part de l'espace */
+    margin-bottom: 20px;
 }
-footer p{
+
+aside h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
     text-align: center;
+    color: #ffcc00;
+}
+
+aside form label,
+aside form input,
+aside form select {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+}
+
+aside form input,
+aside form select {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+/* Section */
+section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex: 2; /* Le section prend 2 parts de l'espace, plus grand que aside */
+}
+
+section h2 {
+    color: #ffcc00;
+    font-size: 28px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+    margin-top: auto; /* Pousse le footer vers le bas */
+}
+
+footer p {
+    margin: 5px 0;
 }

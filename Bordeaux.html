@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<style type="text/css">
-			@import url(Bordeaux.css);
-		</style>
-	</head>
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/logo.png" href="image/logo.png" />
+    <title>Immo Bordeaux Métropole</title>
+    <style type="text/css">
+        @import url("Bordeaux.css");
+    </style>
+</head>
+<body>
+    <div class="container">
         <header>
             <h1>Immo Bordeaux Métropole</h1>
         </header>
         <nav>
             <ul>
-                <li><a href="Accueil.html"> Accueil </a></li>
-                <li><a href="Achats.html">Achats </a></li>
-                <li><a href="Locations.html"> Locations  </a></li>
-                <li><a href="Nos_Agences.html"> Nos Agences </a></li>
-                <li><a href="Outils.html"> Outils </a></li>
-                <li><a href="Nous_Contacter.html"> Nous Contacter </a></li>
-                <li><a href="Mon_compte.html"> Mon compte </a></li>
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="Achats.html">Achats</a></li>
+                <li><a href="Locations.html">Locations</a></li>
+                <li><a href="Nos_Agences.html">Nos Agences</a></li>
+                <li><a href="Outils.html">Outils</a></li>
+                <li><a href="Nous_Contacter.html">Nous Contacter</a></li>
+                <li><a href="Mon_compte.html">Mon Compte</a></li>
             </ul>
         </nav>
-        <aside>
-            <nav>
-                <form action="#">
-                    <select name="Type de bien" id="TypeBien">
-                        <option value="Type de bien"></option>
-                        <option value="Type de bien">Appartement T1</option>
-                        <option value="Type de bien">Appartement T2</option>
-                        <option value="Type de bien">Appartement T3</option>
-                        <option value="Type de bien">Maison</option>
+        <div class="main-content">
+            <aside>
+                <h2>Recherche rapide</h2>
+                <form action="#" method="get">
+                    <label for="TypeBien">Type de bien :</label>
+                    <select name="TypeBien" id="TypeBien">
+                        <option value="">-- Choisir un type --</option>
+                        <option value="Appartement_T1">Appartement T1</option>
+                        <option value="Appartement_T2">Appartement T2</option>
+                        <option value="Appartement_T3">Appartement T3</option>
+                        <option value="Maison">Maison</option>
                     </select>
-              </form>
-            </nav>
-        </aside>
-        <section>
-            <article>
-                
-            </article>        
-        </section>
-        <footer>
-            <p>Agence Immobilière Immo Bordeaux Métropole</p>
-            <p>Acteur de la Région Aquitaine en Immobilier d'habitation depuis 1999</p>
-        </footer>
-    </body>
+                    <br /><br />
+                    <label for="Budget">Budget (€) :</label>
+                    <input type="number" id="Budget" name="Budget" placeholder="Ex : 200000" />
+                    <br /><br />
+                    <input type="submit" value="Rechercher" />
+                </form>
+            </aside>
+            <section>
+                <article>
+                    <h2>À propos d'Immo Bordeaux Métropole</h2>
+                    <p>
+                        Depuis 1999, notre agence accompagne les habitants de la région Aquitaine dans leur recherche de biens immobiliers. Que vous cherchiez à acheter ou à louer, nous mettons à votre disposition un large choix de propriétés pour répondre à vos besoins.
+                    </p>
+                    <p>
+                        Parcourez nos listings, découvrez nos outils interactifs, et contactez nos agences pour plus d'informations !
+                    </p>
+                </article>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>Agence Immobilière Immo Bordeaux Métropole</p>
+        <p>Acteur de la Région Aquitaine en Immobilier d'habitation depuis 1999</p>
+    </footer>
+</body>
 </html>
